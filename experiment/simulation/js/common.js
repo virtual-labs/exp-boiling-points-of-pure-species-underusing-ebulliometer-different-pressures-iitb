@@ -112,4 +112,21 @@ function gauss(a, c) {
 // x1 = 1/T
 // x2 = ln(P)/T
 //y = ln(P)
+function show_panel(id) {
+    try {
+        var bsOffcanvas = new bootstrap.Offcanvas(document.getElementById(`offcanvasRight${id}`));
+        bsOffcanvas.show();
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
+function hide_panel(id) {
+    if (document.getElementById(`hide_panel${id}`)) {
+        document.getElementById(`hide_panel${id}`).click();
+    }
+}
+for (let i = 0; i < main_table_data.length; i++) {
+    main_table_data[i][0] = main_table_data[i][0] + Math.round(2 * Math.random() - 1);
+}
 //# sourceMappingURL=common.js.map

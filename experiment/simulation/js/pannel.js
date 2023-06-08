@@ -63,4 +63,37 @@ class Pannel {
         // this.rightpannel.innerHTML+=`<div style=""  id="score">Score: ${text}</div>`
     }
 }
+class Table {
+    constructor(heading_column, data) {
+        this.template = `    
+    <table class="table" style="height: 100%">
+        <thead>
+            <tr id="header-1">
+            </tr>
+        </thead>
+        <tbody id="table-body">
+        
+        </tbody>
+    </table>`;
+        this.heading_column = heading_column;
+        this.data = data;
+    }
+    draw() {
+        console.log(this.data);
+        let row = "";
+        for (let i = 0; i < this.heading_column.length; i++) {
+            row += `<th>${this.heading_column[i]}</th>`;
+        }
+        document.getElementById("header-1").innerHTML = row;
+        document.getElementById('table-body').innerHTML = "";
+        for (let i = 0; i < this.data.length; i++) {
+            let col = `<tr>`;
+            for (let j = 0; j < this.data[i].length; j++) {
+                col += `<td>${this.data[i][j]}</td>`;
+            }
+            col += `</tr>`;
+            document.getElementById('table-body').innerHTML += col;
+        }
+    }
+}
 //# sourceMappingURL=pannel.js.map
