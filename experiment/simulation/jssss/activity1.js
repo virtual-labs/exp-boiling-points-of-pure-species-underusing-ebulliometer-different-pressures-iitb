@@ -21,7 +21,7 @@ function start_act1() {
 function move_to_activity3() {
     document.getElementById('panel1_btn').remove();
     canvas.removeEventListener('click', a1_mouseclick);
-    activity5();
+    activity3();
 }
 //varibles related to activity 1
 var question = [];
@@ -111,7 +111,7 @@ function a1_draw_all_components() {
     var sq = new Chemistry.Custome_image(heating_tap, new Chemistry.Point(1650, 600), 35, 66, canvas);
     sq.name = "heating_tap";
     scene.add(sq);
-    var sq = new Chemistry.Custome_image(condenser, new Chemistry.Point(280, 830), 64, 232, canvas);
+    var sq = new Chemistry.Custome_image(condenser, new Chemistry.Point(480, 750), 64, 232, canvas);
     sq.name = "condenser";
     scene.add(sq);
     var sq = new Chemistry.Custome_image(dimmer_stat, new Chemistry.Point(150, 220), 59, 59, canvas);
@@ -184,12 +184,12 @@ function load_higlighted_images() {
         new Chemistry.Text("manometer", new Chemistry.Point(400, 80), canvas),
         new Chemistry.Text("ballast_tank", new Chemistry.Point(1300, 170), canvas),
         new Chemistry.Text("heating_tap", new Chemistry.Point(1600, 730), canvas),
-        new Chemistry.Text("condenser", new Chemistry.Point(200, 850), canvas),
+        new Chemistry.Text("condenser", new Chemistry.Point(420, 850), canvas),
         new Chemistry.Text("dimmer_stat", new Chemistry.Point(100, 40), canvas),
         new Chemistry.Text("n2_tank", new Chemistry.Point(80, 500), canvas),
         new Chemistry.Text("connector", new Chemistry.Point(1150, 480), canvas),
         new Chemistry.Text("vaccum_pump", new Chemistry.Point(1000, 600), canvas),
-        new Chemistry.Text("temp_indicator", new Chemistry.Point(600, 420), canvas),
+        new Chemistry.Text("temp_indicator", new Chemistry.Point(600, 420), canvas)
     ];
 }
 function a1_random_questions() {
@@ -353,4 +353,5 @@ function a1_mouseclick(e) {
     let y = Math.round((canvas.height - (e.clientY - rect.y)) / lscale);
     a1_check_isinside(x, y);
 }
+activity1();
 //# sourceMappingURL=activity1.js.map
