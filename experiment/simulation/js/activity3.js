@@ -204,5 +204,4 @@ function calculate_T() {
     show_panel(3);
     activity4();
 }
-activity3();
 //# sourceMappingURL=activity3.js.map
