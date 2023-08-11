@@ -1,0 +1,20 @@
+// basic images
+var manometer = new Image();
+manometer.src = './images/Separate_elements_Webp/Manometer.webp';
+var ballast_tank = new Image();
+ballast_tank.src = './images/Separate_elements_Webp/Ballast_Tank.webp';
+var heating_tap = new Image();
+heating_tap.src = './images/Separate_elements_Webp/Heating_Tap.webp';
+var condenser = new Image();
+condenser.src = './images/Separate_elements_Webp/Condenser.webp';
+var dimmer_stat = new Image();
+dimmer_stat.src = './images/Separate_elements_Webp/Temperature_Indicator2.webp';
+var n2_tank = new Image();
+n2_tank.src = './images/Separate_elements_Webp/N2_Tank.webp';
+var connector = new Image();
+connector.src = './images/Separate_elements_Webp/Connector.webp';
+var vaccum_pump = new Image();
+vaccum_pump.src = './images/Separate_elements_Webp/Vacuum_Pump.webp';
+var temp_indicator = new Image();
+temp_indicator.src = './images/Separate_elements_Webp/Temperature_Indicator.webp';
+//# sourceMappingURL=loaded_images.js.map
