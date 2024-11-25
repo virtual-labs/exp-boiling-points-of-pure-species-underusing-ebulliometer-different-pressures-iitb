@@ -12,6 +12,11 @@ var B1;
 var C1;
 function activity6() {
     pp.clearleftpannel();
+    pp.showdescription(`
+	 <div class='discription_text'>
+	     Experiment Completed!!
+	 </div>
+	 `, 3);
     get_plot_values();
 }
 function get_plot_values() {
@@ -37,7 +42,7 @@ function draw_chart() {
     pp.clearleftpannel();
     pp.addcanvas('myChart');
     if (document.getElementById('panel1_btn')) {
-        document.getElementById("panel1_btn").remove();
+        document.getElementById('panel1_btn').remove();
     }
     // pp.addButtonToRightPanel("hello", print_hello, 3);
     for (let i = 0; i < main_table_data.length; i++) {
@@ -47,11 +52,11 @@ function draw_chart() {
     calculate_y_datapoints();
     calculate_yy_datapoints();
     var ctx = document.getElementById('myChart');
-    ctx.style.backgroundColor = "white";
-    ctx.style.marginTop = "5px";
-    ctx.style.marginLeft = "10%";
-    ctx.style.padding = "10px";
-    ctx.style.borderRadius = "8px";
+    ctx.style.backgroundColor = 'white';
+    ctx.style.marginTop = '5px';
+    ctx.style.marginLeft = '10%';
+    ctx.style.padding = '10px';
+    ctx.style.borderRadius = '8px';
     if (typeof chart != 'undefined') {
         chart.destroy();
     }
@@ -70,36 +75,24 @@ function draw_chart() {
                     borderColor: 'blue',
                     tension: 0.5,
                     showLine: false,
-                    // yAxisID: 'A',
-                    // borderWidth: 1,
-                    // borderColor: "green",
-                    // backgroundColor: "rgba(34, 139, 34, 0.5)",
                 },
                 {
-                    label: 'ln(p) = A - B/(C + T)',
+                    label: `ln(p) = ${A1.toFixed(2)} - ${B1.toFixed(2)}/(${C1.toFixed(2)} + T)`,
                     data: data1,
                     fill: false,
                     borderColor: 'red',
                     tension: 0.5,
-                    showLine: true
-                    // yAxisID: 'A',
-                    // borderWidth: 1,
-                    // borderColor: "red",
-                    // backgroundColor: "rgba(255, 0, 0, 0.5)",
+                    showLine: true,
                 },
                 {
-                    label: 'ln10(P) = A - B/(T - 273.15 + C)',
+                    label: `ln10(P) = ${A.toFixed(2)} - ${B.toFixed(2)}/(T - 273.15 + ${C.toFixed(2)})`,
                     data: data2,
                     fill: false,
                     borderColor: 'green',
                     tension: 0.5,
-                    showLine: true
-                    // yAxisID: 'A',
-                    // borderWidth: 1,
-                    // borderColor: "red",
-                    // backgroundColor: "rgba(255, 0, 0, 0.5)",
+                    showLine: true,
                 },
-            ]
+            ],
         },
         options: {
             maintainAspectRatio: true,
@@ -108,16 +101,16 @@ function draw_chart() {
                     title: {
                         display: true,
                         text: 'P (kPa)',
-                        font: { size: 14, weight: 'bold' }
-                    }
+                        font: { size: 14, weight: 'bold' },
+                    },
                 },
                 x: {
                     title: {
                         display: true,
                         text: 'T (K)',
-                        font: { size: 14, weight: 'bold' }
-                    }
-                }
+                        font: { size: 14, weight: 'bold' },
+                    },
+                },
             },
             plugins: {
                 title: {
@@ -125,9 +118,9 @@ function draw_chart() {
                     text: `P vs T`,
                     font: { size: 18 },
                 },
-                legend: { labels: { font: { size: 14, weight: 'bold' } } }
+                legend: { labels: { font: { size: 14, weight: 'bold' } } },
             },
-        }
+        },
     });
 }
 function calculate_y_datapoints() {

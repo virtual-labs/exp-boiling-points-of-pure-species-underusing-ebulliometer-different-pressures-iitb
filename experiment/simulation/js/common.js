@@ -1,8 +1,8 @@
 function verify_values(value, truevalue) {
-    if ((truevalue == 0) && (value == truevalue)) {
+    if (truevalue == 0 && value == truevalue) {
         return true;
     }
-    let calculated_value = Math.abs((truevalue - value) / truevalue * 100);
+    let calculated_value = Math.abs(((truevalue - value) / truevalue) * 100);
     if (calculated_value <= 4) {
         return true;
     }
@@ -38,7 +38,7 @@ function regression_linear(x, y) {
     let pol = [];
     pol[0] = (sumx * sumy - n * sumxy) / (Math.pow(sumx, 2) - n * sumxx);
     pol[1] = (sumy - pol[0] * sumx) / n;
-    return (pol);
+    return pol;
 }
 function ascending_random_array() {
     let arr = new Array();
@@ -53,7 +53,9 @@ function ascending_random_array() {
         if (!found) {
             arr.push(x);
             if (arr.length == 5) {
-                arr.sort(function (a, b) { return a - b; });
+                arr.sort(function (a, b) {
+                    return a - b;
+                });
                 return arr;
             }
         }
@@ -80,12 +82,16 @@ function regression_linear_2variable(x1, x2, y) {
         sumx2y += x2[i] * y[i];
     }
     let pol = [];
-    let a = [[n, sumx1, sumx2], [sumx1, sumx1sq, sumx1x2], [sumx2, sumx1x2, sumx2sq]];
+    let a = [
+        [n, sumx1, sumx2],
+        [sumx1, sumx1sq, sumx1x2],
+        [sumx2, sumx1x2, sumx2sq],
+    ];
     let c = [sumy, sumx1y, sumx2y];
     // console.log(a);
     // console.log(c);
     pol = gauss(a, c);
-    return (pol);
+    return pol;
 }
 function gauss(a, c) {
     let n = c.length;
@@ -107,7 +113,7 @@ function gauss(a, c) {
         }
         x[i] = sum / a[i][i];
     }
-    return (x);
+    return x;
 }
 // x1 = 1/T
 // x2 = ln(P)/T
@@ -127,6 +133,62 @@ function hide_panel(id) {
     }
 }
 for (let i = 0; i < main_table_data.length; i++) {
-    main_table_data[i][0] = main_table_data[i][0] + Math.round(2 * Math.random() - 1);
+    main_table_data[i][0] =
+        main_table_data[i][0] + Math.round(2 * Math.random() - 1);
+}
+// data for activity 2
+var all_labels = [];
+function create_labels() {
+    all_labels = [];
+    let text = new Chemistry.Text('Vacuum Pump', new Chemistry.Point(980, 600), canvas);
+    text.color = 'black';
+    text.font = '22vw Arial';
+    all_labels.push(text);
+    let text1 = new Chemistry.Text('Ballast Tank', new Chemistry.Point(1270, 750), canvas);
+    text1.color = 'black';
+    text1.font = '22vw Arial';
+    all_labels.push(text1);
+    let text2 = new Chemistry.Text('Manometer', new Chemistry.Point(1040, 60), canvas);
+    text2.color = 'black';
+    text2.font = '22vw Arial';
+    all_labels.push(text2);
+    let text3 = new Chemistry.Text('Heating Tap', new Chemistry.Point(1300, 170), canvas);
+    text3.color = 'black';
+    text3.font = '22vw Arial';
+    all_labels.push(text3);
+    let text4 = new Chemistry.Text('Dimmer Stat', new Chemistry.Point(1200, 350), canvas);
+    text4.color = 'black';
+    text4.font = '22vw Arial';
+    all_labels.push(text4);
+    let text5 = new Chemistry.Text('Condenser', new Chemistry.Point(1300, 550), canvas);
+    text5.color = 'black';
+    text5.font = '22vw Arial';
+    all_labels.push(text5);
+    let text6 = new Chemistry.Text('N2 Tank', new Chemistry.Point(1550, 640), canvas);
+    text6.color = 'black';
+    text6.font = '22vw Arial';
+    all_labels.push(text6);
+    let text7 = new Chemistry.Text('Temp Indicator', new Chemistry.Point(1680, 170), canvas);
+    text7.color = 'black';
+    text7.font = '22vw Arial';
+    all_labels.push(text7);
+    let text8 = new Chemistry.Text('Temp_out_hot', new Chemistry.Point(1680, 40), canvas);
+    text8.color = 'black';
+    text8.font = '22vw Arial';
+    all_labels.push(text8);
+    let text9 = new Chemistry.Text('Connector', new Chemistry.Point(1680, 450), canvas);
+    text9.color = 'black';
+    text9.font = '22vw Arial';
+    all_labels.push(text9);
+    let text10 = new Chemistry.Text('Differential Ebulliometer', new Chemistry.Point(1680, 300), canvas);
+    text10.color = 'black';
+    text10.font = '22vw Arial';
+    all_labels.push(text10);
+}
+// to display all labels in activity 2
+function display_labels() {
+    for (let i = 0; i < all_labels.length; i++) {
+        all_labels[i].draw();
+    }
 }
 //# sourceMappingURL=common.js.map
