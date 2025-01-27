@@ -1,11 +1,54 @@
 [
     {
-        "question": "Sample Question",
+        "question": "What is vapor pressure?",
         "qid": 1,
-        "option_a": "Option A",
-        "option_b": "Option B",
-        "option_c": "Option C",
-        "option_d": "Option D",
+        "option_a": "The pressure exerted by the liquid state of a substance",
+        "option_b": "The pressure exerted by the vapor state of a substance when it is in thermodynamic equilibrium with its liquid or solid state",
+        "option_c": "The atmospheric pressure exerted on a liquid",
+        "option_d": "The pressure required to compress a liquid",
+        "correct_option": "b"
+    },
+
+    {
+        "question": "According to the Clausius-Clapeyron equation, how does vapor pressure relate to temperature?",
+        "qid": 2,
+        "option_a": "It remains constant with changes in temperature",
+        "option_b": "It increases with increasing temperature when the enthalpy of vaporization is positive",
+        "option_c": "It decreases with increasing temperature",
+        "option_d": "It is independent of the enthalpy of vaporization",
+        "correct_option": "b"
+    },
+
+    {
+        "question": "What does the Antoine equation provide for a given substance?",
+        "qid": 3,
+        "option_a": "The heat capacity of a substance",
+        "option_b": "The relationship between vapor pressure and temperature",
+        "option_c": "The molecular weight of a substance",
+        "option_d": "The density of a liquid at different temperatures",
+        "correct_option": "b"
+    },
+
+    {
+        "question": "At what point does a liquid achieve its boiling state?",
+        "qid": 4,
+        "option_a": "When the vapor pressure equals the atmospheric pressure",
+        "option_b": "When the temperature is constant",
+        "option_c": "When the vapor pressure is less than atmospheric pressure",
+        "option_d": "When the liquid reaches its saturation point",
         "correct_option": "a"
+    },
+
+    {
+        "question": "How does temperature affect the vapor pressure of a liquid?",
+        "qid": 5,
+        "option_a": "Vapor pressure decreases as temperature increases",
+        "option_b": "Vapor pressure increases as temperature increases",
+        "option_c": "Vapor pressure remains constant regardless of temperature changes",
+        "option_d": "Vapor pressure is only affected by the presence of solutes, not temperature",
+        "correct_option": "b"
     }
 ]
+
+
+
