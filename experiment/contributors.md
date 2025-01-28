@@ -6,4 +6,4 @@
 ### Developers
 | SNo. | Name | Email | Institute | ID |
 | :---: | :---: | :---: | :---: | :---: |
-| 1 |  | email | Indian Institute of Technology Bombay | id |
+| 1 | Jay Tailor | email | Indian Institute of Technology Bombay | id |

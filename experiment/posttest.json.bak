@@ -1,0 +1,48 @@
+[
+    {
+        "question": "What condition indicates that you should stop increasing the heating rate?",
+        "qid": 1,
+        "option_a": "When the pressure reaches maximum",
+        "option_b": "When the cold-water temperature stabilizes",
+        "option_c": "When small increments in heating rate don't raise the temperature",
+        "option_d": "When the drop rate reaches 100 drops per minute",
+        "correct_option": "c"
+    },
+
+    {
+        "question": "What is the optimal drop rate that should be maintained?",
+        "qid": 2,
+        "option_a": "5 to 10 drops per minute",
+        "option_b": "60 to 70 drops per minute",
+        "option_c": "100 to 125 drops per minute",
+        "option_d": "There is no such requirement/condition.",
+        "correct_option": "b"
+    },
+
+    {
+        "question": "how should the heating rate be adjusted?",
+        "qid": 3,
+        "option_a": "Increase rapidly to save time",
+        "option_b": "Increase slowly and allow system to accommodate change",
+        "option_c": "Give constant change throughout the experiment",
+        "option_d": "Quick increase then decrease gradually until temperature stabilizes",
+        "correct_option": "b"
+    },
+
+    {
+        "question": "What should be done before starting the vacuum pump?",
+        "qid": 4,
+        "option_a": "Reduce heating rate",
+        "option_b": "Calculate pressure based on manometer value",
+        "option_c": "Shut down the heat supply",
+        "option_d": "Start the nitrogen purge",
+        "correct_option": "c"
+    }
+]
+
+
+
+
+
+
+
